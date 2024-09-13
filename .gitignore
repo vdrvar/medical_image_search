@@ -1,1 +1,7 @@
 /target
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+*.tif
