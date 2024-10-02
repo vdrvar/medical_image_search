@@ -54,35 +54,34 @@ We use the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsi
 1. **Clone the Repository**
 
    
-   '''
+   ```
    git clone https://github.com/yourusername/medical-image-search.git
    cd medical-image-search
-   '''
+   ```
    
 2. **Set Up Python Environment**
 
    Navigate to the directory containing Python scripts:
 
-   bash
-   '''
+   ```
    cd python_scripts
-   '''
+   ```
 
    Install the required Python packages:
 
-   bash
-   '''
+   
+   ```
    pip install -r requirements.txt
-   '''
+   ```
 
 3. **Generate Image Embeddings**
 
    Run the embedding generation script:
 
-   bash
-   '''
+   
+   ```
    python generate_embeddings.py
-   '''
+   ```
 
    This will process images in the `data/` directory and save the embeddings to `embeddings.pkl`.
 
@@ -90,11 +89,11 @@ We use the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsi
 
    Return to the root directory and build the Rust application:
 
-   bash
-   '''
+   
+   ```
    cd ..
    cargo build --release
-   '''
+   ```
 
 ## Usage
 
@@ -102,10 +101,10 @@ We use the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsi
 
    Start the Rust server:
 
-   bash
-   '''
+   
+   ```
    cargo run --release
-   '''
+   ```
 
 2. **Access the Web Interface**
 
@@ -137,24 +136,24 @@ Contributions are welcome! Please follow these steps:
 
 2. **Create a New Branch**
 
-   bash
-   '''
+   
+   ```
    git checkout -b feature/your-feature-name
-   '''
+   ```
 
 3. **Commit Your Changes**
 
-   bash
-   '''
+   
+   ```
    git commit -am 'Add some feature'
-   '''
+   ```
 
 4. **Push to the Branch**
 
-   bash
-   '''
+   
+   ```
    git push origin feature/your-feature-name
-   '''
+   ```
 
 5. **Submit a Pull Request**
 
