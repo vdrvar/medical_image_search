@@ -54,7 +54,7 @@ We use the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsi
 1. **Clone the Repository**
 
    
-   bash'''
+   '''
    git clone https://github.com/yourusername/medical-image-search.git
    cd medical-image-search
    '''
