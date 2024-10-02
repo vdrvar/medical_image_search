@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "medical-image-search"
+version = "0.1.0"
+description = ""
+authors = ["Vjekoslav Drvar <vdrvar@croz.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = "^2.4.1"
+torchvision = "^0.19.1"
+numpy = "^2.1.1"
+pillow = "^10.4.0"
+jupyterlab = "^4.2.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
