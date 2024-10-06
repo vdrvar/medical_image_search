@@ -25,12 +25,14 @@ This project is a medical image similarity search engine built using **Rust** an
 ## Project Structure
 
 - **Python Scripts**:
-  - `generate_embeddings.py`: Generates embeddings for images using pre-trained models and saves them in pickle files.
+  - `calculate_embeddings.py`: Generates embeddings for images using pre-trained models and saves them in separate `.npy` and `.json` files for each class.
 - **Rust Components**:
   - **ANN Implementation**: Loads embeddings and performs similarity search using efficient ANN algorithms.
   - **Web Frontend**: Built using the Rocket framework, allows users to upload images and view results.
 - **Data Directory (`data/`)**:
   - Contains subdirectories for each category (e.g., `COVID`, `Normal`, `Lung_Opacity`, `Viral Pneumonia`), each with images and metadata.
+- **Embeddings Directory (`embeddings/`)**:
+  - Contains `.npy` files for each class that store image embeddings, and `.json` files with metadata for each embedding.
 
 ## Dataset
 
@@ -53,23 +55,22 @@ We use the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsi
 
 1. **Clone the Repository**
 
-   
    ```
    git clone https://github.com/yourusername/medical-image-search.git
    cd medical-image-search
    ```
-   
+
 2. **Set Up Python Environment**
 
-   Navigate to the directory containing Python scripts:
-
+   Create and activate a virtual environment:
+   
    ```
-   cd python_scripts
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
    ```
 
    Install the required Python packages:
 
-   
    ```
    pip install -r requirements.txt
    ```
@@ -78,20 +79,18 @@ We use the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsi
 
    Run the embedding generation script:
 
-   
    ```
-   python generate_embeddings.py
+   python calculate_embeddings.py
    ```
 
-   This will process images in the `data/` directory and save the embeddings to `embeddings.pkl`.
+   This will process images in the `data/` directory and save the embeddings to separate `.npy` and `.json` files for each class in the `embeddings/` directory.
 
 4. **Build the Rust Project**
 
    Return to the root directory and build the Rust application:
 
-   
    ```
-   cd ..
+   cd medical_ann
    cargo build --release
    ```
 
@@ -101,7 +100,6 @@ We use the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsi
 
    Start the Rust server:
 
-   
    ```
    cargo run --release
    ```
@@ -136,21 +134,18 @@ Contributions are welcome! Please follow these steps:
 
 2. **Create a New Branch**
 
-   
    ```
    git checkout -b feature/your-feature-name
    ```
 
 3. **Commit Your Changes**
 
-   
    ```
    git commit -am 'Add some feature'
    ```
 
 4. **Push to the Branch**
 
-   
    ```
    git push origin feature/your-feature-name
    ```
@@ -165,5 +160,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 - **Datasets**: [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database/data)
 - **Python Libraries**: PyTorch, NumPy, SciPy
-- **Rust Crates**: tch-rs, Rocket, hnsw-rs
+- **Rust Crates**: tch-rs, Rocket, ndarray, csv
 - **Inspiration**: Open-source medical imaging projects and the need for efficient diagnostic tools.
