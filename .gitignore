@@ -8,3 +8,7 @@
 *.pkl
 
 embeddings/
+
+notebooks/
+
+data/
