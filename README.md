@@ -11,7 +11,7 @@ We use the [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsi
 - **Normal**
 - **Viral Pneumonia**
 
-The project assumes you download the 4 folders with images from Kaggle and place them in a designated folder called `data\`.
+The project assumes you download the 4 folders with images from Kaggle and place them in a designated folder called `data/`.
 
 ## Setup
 
