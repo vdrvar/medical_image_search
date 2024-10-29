@@ -25,7 +25,6 @@ The project assumes you download the 4 folders with images from Kaggle and place
     This project uses [Poetry](https://python-poetry.org/) for dependency management. Make sure you have Poetry installed.
 
     ```bash
-    # Install dependencies
     poetry install
     ```
 
