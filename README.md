@@ -17,7 +17,7 @@ The project assumes you download the 4 folders with images from Kaggle and place
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/medical-image-classification.git
+    git clone https://github.com/vdrvar/medical_image_search.git
     cd medical-image-classification
     ```
 
